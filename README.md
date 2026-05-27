@@ -1,4 +1,7 @@
 # sercapnp
+
+> **Docs:** [ZAP for IntelliJ](https://zap-proto.dev/docs/sdks) · part of the [ZAP Protocol](https://zap-proto.io)
+
 Capnp support for intellij
 
 ## About

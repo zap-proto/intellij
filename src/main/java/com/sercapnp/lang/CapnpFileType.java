@@ -22,19 +22,19 @@ public class CapnpFileType extends LanguageFileType {
     @NotNull
     @Override
     public String getName() {
-        return "Capnp file";
+        return "Zap file";
     }
 
     @NotNull
     @Override
     public String getDescription() {
-        return "Capnp language file";
+        return "ZAP schema language file";
     }
 
     @NotNull
     @Override
     public String getDefaultExtension() {
-        return "capnp";
+        return "zap";
     }
 
     @Nullable

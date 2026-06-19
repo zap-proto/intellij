@@ -39,7 +39,7 @@ public class CapnpColorSettingsPage implements ColorSettingsPage {
     @NotNull
     @Override
     public String getDemoText() {
-        return "# Cap'n Proto example\n" +
+        return "# ZAP example\n" +
                "@0x85150b117366d14b;\n" +
                "\n" +
                "struct Person {\n" +
@@ -70,6 +70,6 @@ public class CapnpColorSettingsPage implements ColorSettingsPage {
     @NotNull
     @Override
     public String getDisplayName() {
-        return "Cap'n Proto";
+        return "ZAP";
     }
 }

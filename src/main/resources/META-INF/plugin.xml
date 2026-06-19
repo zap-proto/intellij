@@ -1,11 +1,12 @@
 <idea-plugin>
-    <id>com.sercapnp</id>
-    <name>SerCapnp</name>
+    <id>org.zapproto.intellij</id>
+    <name>ZAP</name>
     <version>2.0</version>
-    <vendor email="xmonader@gmail.com" url="https://github.com/xmonader">xmonader</vendor>
+    <vendor url="https://github.com/zap-proto/intellij">zap-proto</vendor>
 
     <description><![CDATA[
-Capnp Support for Intellij-based IDEs
+ZAP schema language support for IntelliJ-based IDEs: syntax highlighting, file type and ID generation.
+ZAP is a fork of <a href="https://capnproto.org">Cap'n Proto</a> and stays wire- and library-compatible with it; the <code>.zap</code> and <code>.capnp</code> schema extensions are both supported.
 ]]></description>
 
 
@@ -22,16 +23,16 @@ Capnp Support for Intellij-based IDEs
     <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Capnp file"
+        <fileType name="Zap file"
                   implementationClass="com.sercapnp.lang.CapnpFileType"
                   fieldName="INSTANCE"
-                  language="Capnp"
-                  extensions="capnp"/>
+                  language="Zap"
+                  extensions="zap;capnp"/>
         <lang.parserDefinition
-                language="Capnp"
+                language="Zap"
                 implementationClass="com.sercapnp.lang.CapnpParserDefinition"/>
         <lang.syntaxHighlighterFactory
-                language="Capnp"
+                language="Zap"
                 implementationClass="com.sercapnp.lang.CapnpSyntaxHighlighterFactory"/>
         <colorSettingsPage implementation="com.sercapnp.lang.CapnpColorSettingsPage"/>
     </extensions>
@@ -40,12 +41,12 @@ Capnp Support for Intellij-based IDEs
 
 
     <actions>
-        <action id="GenerateCapnpID" class="com.sercapnp.actions.GenerateCapnpID" text="GenerateCapnpID"
-                description="Generate capnp id">
+        <action id="GenerateCapnpID" class="com.sercapnp.actions.GenerateCapnpID" text="Generate ZAP ID"
+                description="Generate ZAP id">
             <keyboard-shortcut first-keystroke="control alt A" second-keystroke="G" keymap="$default"/>
             <add-to-group group-id="ToolsMenu" anchor="first" />
         </action>
-        <action id="Capnp.New" class="com.sercapnp.actions.NewFileAction" text="Capnp File" description="Create new Capnp file">
+        <action id="Capnp.New" class="com.sercapnp.actions.NewFileAction" text="ZAP File" description="Create new ZAP file">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFromTemplate"/>
         </action>
     </actions>
